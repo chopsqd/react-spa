@@ -1,9 +1,14 @@
 import React from 'react';
+import {IAirport} from "../models/models";
 
-const AirportCard = () => {
+interface AirportCardProps {
+    airport: IAirport
+}
+
+const AirportCard = ({airport}: AirportCardProps) => {
     return (
         <div>
-            card
+            {airport.name}
         </div>
     );
 };

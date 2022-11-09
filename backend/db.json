@@ -1,0 +1,27 @@
+{
+  "data": {
+      "count": 57421,
+      "next": 2,
+      "previous": null,
+      "results": [
+        {
+          "id": 17811,
+          "name": "Der Dinged Airfield",
+          "ident": "DE-0140",
+          "local_code": null,
+          "region": "DE-HE",
+          "type": "small_airport",
+          "country": "DE"
+        },
+        {
+          "id": 18496,
+          "name": "S Engraver heliport",
+          "ident": "EBSN",
+          "local_code": null,
+          "region": "BE-WLG",
+          "type": "closed",
+          "country": "BE"
+        }
+      ]
+    }
+}
