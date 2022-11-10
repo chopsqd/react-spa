@@ -104,5 +104,32 @@
     "large_airport"
   ],
   "regions": ["BE-WLG", "UZ-SA", "DE-HE"],
-  "countries": ["DE", "BE", "CD", "BW"]
+  "countries": ["DE", "BE", "CD", "BW"],
+  "airport1": {
+    "id": 1,
+    "name": "Der Dinged Airfield",
+    "ident": "DE-0140",
+    "local_code": null,
+    "region": "DE-HE",
+    "type": "small_airport",
+    "country": "DE"
+  },
+  "airport2": {
+    "id": 2,
+    "name": "S Engraver heliport",
+    "ident": "EBSN",
+    "local_code": null,
+    "region": "BE-WLG",
+    "type": "large_airport",
+    "country": "CD"
+  },
+  "airport3": {
+    "id": 3,
+    "name": "Orlando Blueness airport",
+    "ident": "DE-0140",
+    "local_code": null,
+    "region": "UZ-SA",
+    "type": "small_airport",
+    "country": "DE"
+  }
 }

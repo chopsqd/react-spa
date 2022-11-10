@@ -24,3 +24,13 @@ export interface IFilter {
     region: IAirportRegion
     country: IAirportCountry
 }
+
+export interface IAirportDetails {
+    id: 3,
+    name: string
+    ident: string
+    local_code: string
+    region: string
+    type: string
+    country: string
+}
