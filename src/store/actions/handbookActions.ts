@@ -17,8 +17,8 @@ export const fetchHandbooks = () => {
                 regions: response[1].data,
                 countries: response[2].data
             }))
-        } catch (e) {
-            // dispatch(airportSlice.actions.fetchError(e as Error))
+        } catch (e: any) {
+            throw new Error(e.message)
         }
     }
 }
