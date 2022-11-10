@@ -14,3 +14,13 @@ export interface ServerResponse<T> {
     previous: number
     results: T[]
 }
+
+export type IAirportType = string
+export type IAirportRegion = string
+export type IAirportCountry = string
+
+export interface IFilter {
+    type: IAirportType
+    region: IAirportRegion
+    country: IAirportCountry
+}

@@ -35,7 +35,7 @@ const MainPage = () => {
                 airports.map(airport => <AirportCard airport={airport} key={airport.id}/>)
             }
 
-            <ReactPaginate
+            {pageCount && <ReactPaginate
                 breakLabel="..."
                 nextLabel=">"
                 onPageChange={pageChangeHandler}
@@ -48,7 +48,7 @@ const MainPage = () => {
                 previousClassName={"py-1 px-3 border mr-2"}
                 nextClassName={"py-1 px-3 border"}
                 activeClassName={"bg-gray-500 text-white"}
-            />
+            />}
         </div>
     );
 };

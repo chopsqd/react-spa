@@ -1,4 +1,4 @@
-import {IAirport} from "../../models/models";
+import {IAirport, IFilter} from "../../models/models";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface AirportState {
@@ -6,13 +6,15 @@ interface AirportState {
     error: string
     count: number
     airports: IAirport[]
+    airportsContainer: IAirport[]
 }
 
 const initialState: AirportState = {
     loading: false,
     error: '',
     count: 0,
-    airports: []
+    airports: [],
+    airportsContainer: []
 }
 
 interface AirportPayload {
@@ -30,12 +32,19 @@ export const airportSlice = createSlice({
         fetchSuccess(state, action: PayloadAction<AirportPayload>) {
             state.loading = false
             state.airports = action.payload.airports
+            state.airportsContainer = action.payload.airports
             state.count = action.payload.count
             state.error = ''
         },
         fetchError(state, action: PayloadAction<Error>) {
             state.loading = false
             state.error = action.payload.message
+        },
+        filter(state, action: PayloadAction<IFilter>) {
+            state.airports = state.airportsContainer
+                .filter(airport => airport.type.includes(action.payload.type) )
+                .filter(airport => airport.country.includes(action.payload.country) )
+                .filter(airport => airport.region.includes(action.payload.region) )
         }
     }
 })
